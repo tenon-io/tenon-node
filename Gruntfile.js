@@ -28,8 +28,8 @@ module.exports = function(grunt) {
     },
     mochacli: {
       options: {
-        reporter: 'nyan',
-        bail: true
+        reporter: 'spec',
+        bail: false
       },
       all: ['test/*.js']
     },
