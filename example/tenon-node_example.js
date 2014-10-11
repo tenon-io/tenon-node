@@ -18,11 +18,20 @@ tenonApi.checkUrl('http://www.google.com', function(err, result) {
     }
 });
 
-// Check a block of HTML source code
-tenonApi.checkSrc('<p>Test</p>', function(err, result) {
+// Check an HTML document
+tenonApi.checkSrc('<html lang="en"><head><title>Test page</title><head><body><img src="test.jpg"></body></html>', function(err, result) {
     if (err) {
         console.log(err);
     } else {
         console.log('Tenon.checkSrc', result);
+    }
+});
+
+// Check a fragment/block of HTML source
+tenonApi.checkFragment('<img src="test.jpg">', function(err, result) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Tenon.checkFragment', result);
     }
 });
