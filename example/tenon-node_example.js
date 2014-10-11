@@ -11,10 +11,18 @@ var tenonApi = new tenonNode('YOUR_API_KEY_HERE');
 
 // Check a URL
 tenonApi.checkUrl('http://www.google.com', function(err, result) {
-    console.log('Tenon.checkUrl', result);
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Tenon.checkUrl', result);
+    }
 });
 
 // Check a block of HTML source code
 tenonApi.checkSrc('<p>Test</p>', function(err, result) {
-    console.log('Tenon.checkSrc', result);
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Tenon.checkSrc', result);
+    }
 });
