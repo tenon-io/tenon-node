@@ -1,36 +1,49 @@
-#  [![Build Status](https://secure.travis-ci.org/poorgeek/tenon-node.png?branch=master)](http://travis-ci.org/poorgeek/tenon-node)
 
-> Node.js wrapper for the Tenon.io API
+# Node.js wrapper for the Tenon.io API
 
+[![Build Status](https://secure.travis-ci.org/poorgeek/tenon-node.png?branch=master)](http://travis-ci.org/poorgeek/tenon-node)
 
 ## Getting Started
 
 Install the module with: `npm install tenon-node`
 
 ```js
-var tenon-node = require('tenon-node');
-tenon-node.awesome(); // "awesome"
+var tenonNode = require('tenon-node');
+
+// Create an instance with your API key
+var tenonApi = new tenonNode('YOUR_API_KEY_HERE');
+
+tenonApi.checkUrl('http://www.example.com', function(err, result) {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log('Tenon.checkUrl', result);
+    }
+});
+
 ```
-
-Install with cli command
-
-```sh
-$ npm install -g tenon-node
-$ tenon-node --help
-$ tenon-node --version
-```
-
-
-
 
 ## Documentation
 
-_(Coming soon)_
+Each of the following methods takes an optional options object that can be
+More information about available options can be found in the [Tenon API documentation](https://bitbucket.org/tenon-io/tenon.io-documentation/src/master/src/2-understanding-api-request-parameters.md).
+### `checkUrl(url, [options,] callback)`
 
+Tests a given URL for accessibility issues.
+
+### `checkSrc(src, [options,] callback)`
+
+Tests a complete HTML document for accessibility issues.
+
+**Note:** if you want to test a fragment, block or snippet of code against Tenon, then use `checkFragment()` or specify `fragment: '1'` in your options.
+
+### `checkFragment(src, [options,] callback)`
+
+Tests a fragment, block or snippet of code for accessibility issues.
 
 ## Examples
 
-_(Coming soon)_
+See `example/tenon-node_example.js`
 
 
 ## Contributing

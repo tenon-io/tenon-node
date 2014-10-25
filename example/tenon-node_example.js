@@ -10,28 +10,28 @@ var tenonApi = new tenonNode('YOUR_API_KEY_HERE');
 // Examples
 
 // Check a URL
-tenonApi.checkUrl('http://www.google.com', function(err, result) {
+tenonApi.checkUrl('http://www.google.com', {level: '1' }, function(err, result) {
     if (err) {
-        console.log(err);
+        console.error(err);
     } else {
-        console.log('Tenon.checkUrl', result);
+        console.log('Tenon.checkUrl:\n', result);
     }
 });
 
 // Check an HTML document
 tenonApi.checkSrc('<html lang="en"><head><title>Test page</title><head><body><img src="test.jpg"></body></html>', function(err, result) {
     if (err) {
-        console.log(err);
+        console.error(err);
     } else {
-        console.log('Tenon.checkSrc', result);
+        console.log('Tenon.checkSrc:\n', result);
     }
 });
 
 // Check a fragment/block of HTML source
 tenonApi.checkFragment('<img src="test.jpg">', function(err, result) {
     if (err) {
-        console.log(err);
+        console.error(err);
     } else {
-        console.log('Tenon.checkFragment', result);
+        console.log('Tenon.checkFragment:\n', result);
     }
 });
