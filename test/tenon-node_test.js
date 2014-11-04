@@ -7,7 +7,7 @@ var expect = require('must'),
 
 describe('tenon-node module:', function() {
 
-    var API_URL = 'http://beta.tenon.io';
+    var API_URL = 'http://www.tenon.io';
 
     var api = new tenonNode('AN_API_KEY');
 
