@@ -2,7 +2,7 @@
 
 'use strict';
 
-var tenonNode = require('./tenon-node');
+var tenonNode = require('./lib/tenon-node');
 
 var userArgs = process.argv;
 var searchParam = userArgs[2];
