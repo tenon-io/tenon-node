@@ -1,6 +1,6 @@
 {
   "name": "tenon-node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/tenon-node.js",
   "description": "Node.js wrapper for the Tenon.io API",
   "homepage": "https://github.com/poorgeek/tenon-node",
@@ -40,8 +40,5 @@
   },
   "scripts": {
     "test": "grunt"
-  },
-  "bin": {
-    "tenon-node": "cli.js"
   }
 }
