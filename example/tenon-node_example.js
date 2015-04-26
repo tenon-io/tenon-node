@@ -4,7 +4,9 @@
 var tenonNode = require('../lib/tenon-node.js');
 
 // Create an instance with your API key
-var tenonApi = new tenonNode('YOUR_API_KEY_HERE');
+var tenonApi = new tenonNode({
+    api: 'YOUR_API_KEY_HERE'
+});
 
 
 // Examples

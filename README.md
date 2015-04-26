@@ -1,4 +1,4 @@
-
+)
 # Node.js wrapper for the Tenon.io API
 
 [![Build Status](https://secure.travis-ci.org/poorgeek/tenon-node.png?branch=master)](http://travis-ci.org/poorgeek/tenon-node)
@@ -11,7 +11,10 @@ Install the module with: `npm install tenon-node`
 var tenonNode = require('tenon-node');
 
 // Create an instance with your API key
-var tenonApi = new tenonNode('YOUR_API_KEY_HERE');
+var tenonApi = new tenonNode({
+    api: 'YOUR_API_KEY_HERE'
+    baseUrl: 'http://www.tenon.io' // or your private tenon instance
+});
 
 tenonApi.checkUrl('http://www.example.com', function(err, result) {
     if (err) {
