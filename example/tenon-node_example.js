@@ -5,14 +5,14 @@ var tenonNode = require('../lib/tenon-node.js');
 
 // Create an instance with your API key
 var tenonApi = new tenonNode({
-    api: 'YOUR_API_KEY_HERE'
+    key: 'YOUR_API_KEY_HERE'
 });
 
 
 // Examples
 
 // Check a URL
-tenonApi.checkUrl('http://www.google.com', {level: '1' }, function(err, result) {
+tenonApi.checkUrl('http://www.google.com', {level: 'A' }, function(err, result) {
     if (err) {
         console.error(err);
     } else {

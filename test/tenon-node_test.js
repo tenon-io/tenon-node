@@ -10,7 +10,7 @@ describe('tenon-node module:', function() {
     var API_URL = 'http://www.tenon.io';
 
     var api = new tenonNode({
-        api: 'AN_API_KEY',
+        key: 'AN_API_KEY',
         baseUrl: 'http://tenon.io'
     });
 
@@ -18,13 +18,13 @@ describe('tenon-node module:', function() {
 
         it('should accept a baseUrl', function() {
             api.checkUrl('', function() {
-                expect(api.configs.baseUrl).to.equal('http://tenon.io');
+                expect(api.configs.endPoint).to.equal('http://tenon.io/api/');
             });
         });
 
         it('should accept an API key', function() {
             api.checkUrl('', function() {
-                expect(api.configs.api).to.equal('AN_API_KEY');
+                expect(api.configs.key).to.equal('AN_API_KEY');
             });
         });
     });
