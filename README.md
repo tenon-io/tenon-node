@@ -1,4 +1,3 @@
-)
 # Node.js wrapper for the Tenon.io API
 
 [![Build Status](https://secure.travis-ci.org/poorgeek/tenon-node.png?branch=master)](http://travis-ci.org/poorgeek/tenon-node)
