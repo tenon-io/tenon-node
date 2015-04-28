@@ -9,7 +9,25 @@ describe('tenon-node module:', function() {
 
     var API_URL = 'http://www.tenon.io';
 
-    var api = new tenonNode('AN_API_KEY');
+    var api = new tenonNode({
+        key: 'AN_API_KEY',
+        baseUrl: 'http://tenon.io'
+    });
+
+    describe('tenonNode', function() {
+
+        it('should accept a endPoint', function() {
+            api.checkUrl('', function() {
+                expect(api.configs.endPoint).to.equal('http://tenon.io/api/');
+            });
+        });
+
+        it('should accept an API key', function() {
+            api.checkUrl('', function() {
+                expect(api.configs.key).to.equal('AN_API_KEY');
+            });
+        });
+    });
 
     describe('checkUrl', function() {
         it('should return an error if a URL is not specified', function() {
@@ -99,7 +117,6 @@ describe('tenon-node module:', function() {
             });
         });
     });
-
 
     describe('checkFragment', function() {
         it('should return an error if a block of HTML is not specified', function() {
