@@ -31,7 +31,7 @@ Each of the following methods takes an optional options object that can be
 More information about available options can be found in the [Tenon API documentation](https://bitbucket.org/tenon-io/tenon.io-documentation/src/master/src/2-understanding-api-request-parameters.md).
 ### `analyze(string, [options,] callback)`
 
-Tests a given string, code snippet or full HTML page for accessibility issues.
+Tests a given url, code snippet or full HTML page for accessibility issues.
 
 ### `checkUrl(url, [options,] callback)`
 
