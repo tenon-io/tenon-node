@@ -37,3 +37,30 @@ tenonApi.checkFragment('<img src="test.jpg">', function(err, result) {
         console.log('Tenon.checkFragment:\n', result);
     }
 });
+
+// Check a URL
+tenonApi.analyze('http://www.google.com', {level: 'A' }, function(err, result) {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log('Tenon.checkUrl:\n', result);
+    }
+});
+
+// Check an HTML document
+tenonApi.analyze('<html lang="en"><head><title>Test page</title><head><body><img src="test.jpg"></body></html>', function(err, result) {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log('Tenon.checkSrc:\n', result);
+    }
+});
+
+// Check a fragment/block of HTML source
+tenonApi.analyze('<img src="test.jpg">', function(err, result) {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log('Tenon.checkFragment:\n', result);
+    }
+});
