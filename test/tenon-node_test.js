@@ -3,13 +3,13 @@
 
 var expect = require('must'),
     nock = require('nock'),
-    tenonNode = require('../lib/tenon-node.js');
+    TenonNode = require('../lib/tenon-node.js');
 
 describe('tenon-node module:', function() {
 
     var API_URL = 'http://www.tenon.io';
 
-    var api = new tenonNode({
+    var api = new TenonNode({
         key: 'AN_API_KEY',
         baseUrl: 'http://tenon.io'
     });
