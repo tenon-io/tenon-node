@@ -1,10 +1,10 @@
 'use strict';
 
 // Import the module
-var tenonNode = require('../lib/tenon-node.js');
+var TenonNode = require('../lib/tenon-node.js');
 
 // Create an instance with your API key
-var tenonApi = new tenonNode({
+var tenonApi = new TenonNode({
     key: 'YOUR_API_KEY_HERE'
 });
 

@@ -14,7 +14,7 @@ describe('tenon-node module:', function() {
         baseUrl: 'http://tenon.io'
     });
 
-    describe('tenonNode', function() {
+    describe('TenonNode', function() {
 
         it('should accept a endPoint', function() {
             api.checkUrl('', function() {
