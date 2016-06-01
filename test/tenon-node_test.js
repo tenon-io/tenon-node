@@ -7,7 +7,7 @@ var expect = require('must'),
 
 describe('tenon-node module:', function() {
 
-    var API_URL = 'http://www.tenon.io';
+    var API_URL = 'https://www.tenon.io';
 
     var api = new TenonNode({
         key: 'AN_API_KEY',
@@ -18,7 +18,7 @@ describe('tenon-node module:', function() {
 
         it('should accept a endPoint', function() {
             api.checkUrl('', function() {
-                expect(api.configs.endPoint).to.equal('http://tenon.io/api/');
+                expect(api.configs.endPoint).to.equal('https://tenon.io/api/');
             });
         });
 
