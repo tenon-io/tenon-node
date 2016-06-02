@@ -9,46 +9,45 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     nodeunit: {
-      files: ['test/**/*_test.js']
+      files: ['test/**/*_test.js'],
     },
-    jshint: {
+    eslint: {
       options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
+        configFile: '.eslintrc',
       },
       gruntfile: {
-        src: 'Gruntfile.js'
+        src: 'Gruntfile.js',
       },
       lib: {
-        src: ['lib/**/*.js']
+        src: ['lib/**/*.js'],
       },
       test: {
-        src: ['test/**/*.js']
-      }
+        src: ['test/**/*.js'],
+      },
     },
     mochacli: {
       options: {
         reporter: 'spec',
-        bail: false
+        bail: false,
       },
-      all: ['test/*.js']
+      all: ['test/*.js'],
     },
     watch: {
       gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
+        files: '<%= eslint.gruntfile.src %>',
+        tasks: ['eslint:gruntfile'],
       },
       lib: {
-        files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'mochacli']
+        files: '<%= eslint.lib.src %>',
+        tasks: ['eslint:lib', 'mochacli'],
       },
       test: {
-        files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'mochacli']
-      }
-    }
+        files: '<%= eslint.test.src %>',
+        tasks: ['eslint:test', 'mochacli'],
+      },
+    },
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'mochacli']);
+  grunt.registerTask('default', ['eslint', 'mochacli']);
 };

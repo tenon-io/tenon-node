@@ -29,11 +29,12 @@
     "xtend": "^4.0.0"
   },
   "devDependencies": {
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
     "grunt": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^18.1.0",
     "grunt-mocha-cli": "^2.1.0",
-    "jshint-stylish": "^2.2.0",
     "load-grunt-tasks": "^3.5.0",
     "must": "^0.13.1",
     "nock": "^8.0.0",
