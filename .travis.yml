@@ -1,8 +1,17 @@
 language: node_js
 node_js:
-  - '0.10'
-  - '4'
+- '0.12'
+- '4'
+- '6'
 before_install:
-  if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-before_script:
-  - npm install -g grunt-cli
+- if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+- npm install -g grunt-cli
+install: npm install
+deploy:
+  provider: npm
+  email: poorgeek@gmail.com
+  api_key:
+    secure: KkzhBQCpBk2COv+5/B16bZhLwMO6Mvvg7dkU/WXTiyd4koVNu4ISn3Ypz6SmkUwu0SED4CGY6+x4uABLqENEs8CQViIia3kHxBClh+nenbEdRuAehLA11Axl0C0E8ZXCpG2QM1W5KNjqIhvDg7TzeOw1h9YYQm5pOOyiIzauAKo=
+  on:
+    tags: true
+    repo: poorgeek/tenon-node
