@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0
+- Default to the https version of the Tenon API (@thedrew12)
+- Always return Tenon's response even if it's an error.
+- Update devDependencies (@naterkane)
+- Switch from JSHint to ESLint for managing style
+
 ## 0.3.0
 - Added `analyze()` which will validate a string no matter if its a URL, HTML document or HTML fragment. (@asabaylus)
 

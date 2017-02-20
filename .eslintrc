@@ -1,0 +1,28 @@
+{
+  "extends": "airbnb/base",
+  "env": {
+    "node": true,
+    "mocha": true,
+  },
+  "rules": {
+    // Do not require a space before the function parenthesis
+    space-before-function-paren: 0,
+
+    // Allow dangling underscores to denote private variables and functions
+    no-underscore-dangle: 0,
+
+    // TODO: The following rules are disabled until a refactor to ES6 can happen.
+    func-names: 0,
+    global-require: 0,
+    no-dupe-class-members: 0,
+    no-param-reassign: 0,
+    no-var: 0,
+    object-shorthand: 0,
+    prefer-arrow-callback: 0,
+    prefer-rest-params: 0,
+    prefer-spread: 0,
+    prefer-template: 0,
+    strict: 0,
+    vars-on-top: 0,
+  }
+}

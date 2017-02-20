@@ -1,17 +1,20 @@
 # Node.js wrapper for the Tenon.io API
 
-[![Build Status](https://secure.travis-ci.org/poorgeek/tenon-node.png?branch=master)](http://travis-ci.org/poorgeek/tenon-node)
+[![NPM](https://nodei.co/npm/tenon-node.png)](https://nodei.co/npm/tenon-node/)
+
+[![Build Status](https://secure.travis-ci.org/poorgeek/tenon-node.png?branch=master)](http://travis-ci.org/poorgeek/tenon-node) ![Dependencies](https://david-dm.org/poorgeek/tenon-node.svg) ![Dev Dependencies](https://david-dm.org/naterkane/tenon-node/dev-status.svg)
+
 
 ## Getting Started
 
 Install the module with: `npm install tenon-node`
 
 ```js
-var tenonNode = require('tenon-node');
+var TenonNode = require('tenon-node');
 
 // Create an instance with your API key
 var tenonApi = new tenonNode({
-    key: 'YOUR_API_KEY_HERE'
+    key: 'YOUR_API_KEY_HERE',
     endPoint: 'http://tenon.io' // or your private tenon instance
 });
 
@@ -54,7 +57,7 @@ See `example/tenon-node_example.js`
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com).
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com).
 
 
 ## License
