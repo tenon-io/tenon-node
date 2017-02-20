@@ -10,7 +10,7 @@
 Install the module with: `npm install tenon-node`
 
 ```js
-var TenonNode = require('tenon-node');
+var tenonNode = require('tenon-node');
 
 // Create an instance with your API key
 var tenonApi = new tenonNode({
