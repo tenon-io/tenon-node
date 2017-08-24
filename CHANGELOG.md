@@ -1,6 +1,8 @@
 # Changelog
 
 ## 0.4.1
+- Drop support for Node 0.12.x and add support for Node 8.x
+- Add support for npm@5
 - Update devDependencies
 - Minor documentation improvements (@naterkane)
 
