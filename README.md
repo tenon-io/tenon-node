@@ -31,7 +31,7 @@ tenonApi.analyze('http://www.example.com', function(err, result) {
 ## Documentation
 
 Each of the following methods takes an optional options object that can be
-More information about available options can be found in the [Tenon API documentation](https://bitbucket.org/tenon-io/tenon.io-documentation/src/master/src/2-understanding-api-request-parameters.md).
+More information about available options can be found in the [Tenon API documentation](https://tenon.io/documentation/understanding-request-parameters.php).
 ### `analyze(string, [options,] callback)`
 
 Tests a given url, code snippet or full HTML page for accessibility issues.
