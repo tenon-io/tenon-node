@@ -11,7 +11,7 @@ deploy:
   provider: npm
   email: poorgeek@gmail.com
   api_key:
-    secure: KkzhBQCpBk2COv+5/B16bZhLwMO6Mvvg7dkU/WXTiyd4koVNu4ISn3Ypz6SmkUwu0SED4CGY6+x4uABLqENEs8CQViIia3kHxBClh+nenbEdRuAehLA11Axl0C0E8ZXCpG2QM1W5KNjqIhvDg7TzeOw1h9YYQm5pOOyiIzauAKo=
+    secure: ddjl529idSDpbvHyHrbk0LTjFD4wnXX9duWKzyV2b0Jh5ISXq+mfPvL0mYrWcdT7wheFadr3qzs/OchhMXMA2Td6wWI0Z+vXYtxzZoeWmVVxlnjq0LoYtQ9y4HJ+hesQwFyxIJZn1/YpzoNMEoN+GpXKdjDjrzbhw/ytwe62NG4=
   on:
     tags: true
     repo: poorgeek/tenon-node
