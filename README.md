@@ -1,3 +1,5 @@
+### Active maintenance of tenon-node has moved to [tenon-io/tenon-node](https://github.com/tenon-io/tenon-node).
+
 # Node.js wrapper for the Tenon.io API
 
 [![NPM](https://nodei.co/npm/tenon-node.png)](https://nodei.co/npm/tenon-node/)
