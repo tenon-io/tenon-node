@@ -25,7 +25,7 @@
     "testing"
   ],
   "dependencies": {
-    "request": "^2.44.0",
+    "request": "^2.88.2",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
