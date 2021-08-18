@@ -25,8 +25,8 @@
     "testing"
   ],
   "dependencies": {
-    "request": "^2.44.0",
     "xtend": "^4.0.2"
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^15.1.0",
