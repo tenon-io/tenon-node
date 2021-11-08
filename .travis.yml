@@ -1,17 +1,10 @@
 language: node_js
 node_js:
-- '4'
-- '6'
-- '8'
+- '10'
+- '12'
+- '14'
 before_install:
-- if [[ `npm -v` != 5* ]]; then npm i -g npm@5; fi
+- npm install -g npm
 - npm install -g grunt-cli
 install: npm install
-deploy:
-  provider: npm
-  email: poorgeek@gmail.com
-  api_key:
-    secure: ddjl529idSDpbvHyHrbk0LTjFD4wnXX9duWKzyV2b0Jh5ISXq+mfPvL0mYrWcdT7wheFadr3qzs/OchhMXMA2Td6wWI0Z+vXYtxzZoeWmVVxlnjq0LoYtQ9y4HJ+hesQwFyxIJZn1/YpzoNMEoN+GpXKdjDjrzbhw/ytwe62NG4=
-  on:
-    tags: true
-    repo: poorgeek/tenon-node
+
