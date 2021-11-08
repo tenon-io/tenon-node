@@ -15,7 +15,7 @@ var tenonNode = require('tenon-node');
 // Create an instance with your API key
 var tenonApi = new tenonNode({
     key: 'YOUR_API_KEY_HERE',
-    endPoint: 'http://tenon.io' // or your private tenon instance
+    endPoint: 'http://tenon.io/api/index.php' // or your private tenon instance
 });
 
 tenonApi.analyze('http://www.example.com', function(err, result) {

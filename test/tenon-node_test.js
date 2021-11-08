@@ -4,7 +4,7 @@
 
 var expect = require('must');
 var nock = require('nock');
-var TenonNode = require('../lib/tenon-node.js');
+var TenonNode = require('../lib/tenon-node');
 
 describe('tenon-node module:', function() {
   var API_URL = 'https://www.tenon.io';
@@ -63,7 +63,7 @@ describe('tenon-node module:', function() {
   describe('analyze', function() {
     it('should return an error if no URL or HTML is povided', function() {
       api.analyze('', function(err, result) {
-        expect(err.message).to.be('You must specify a URL or HTML to be checked.');
+        expect(err.message).to.equal('You must specify a URL or HTML to be checked.');
         expect(result).to.be.empty();
       });
     });
@@ -123,7 +123,7 @@ describe('tenon-node module:', function() {
   describe('checkUrl', function() {
     it('should return an error if a URL is not specified', function() {
       api.checkUrl('', function(err, result) {
-        expect(err.message).to.be('You must specify a URL to be checked.');
+        expect(err.message).to.equal('You must specify a URL to be checked.');
         expect(result).to.be.empty();
       });
     });
@@ -142,8 +142,8 @@ describe('tenon-node module:', function() {
         });
 
       api.checkUrl(url, {}, function(err, result) {
-        expect(err).to.be.not.null();
-        expect(err.message).to.be('a message');
+        // expect(err).to.be.not.null();
+        expect(err.message).to.equal('a message');
         expect(result).to.be.empty();
       });
     });
@@ -169,7 +169,7 @@ describe('tenon-node module:', function() {
   describe('checkSrc', function() {
     it('should return an error if an HTML page is not specified', function() {
       api.checkSrc('', function(err, result) {
-        expect(err.message).to.be('You must specify a block of HTML source code to be checked.');
+        expect(err.message).to.equal('You must specify a block of HTML source code to be checked.');
         expect(result).to.be.empty();
       });
     });
@@ -186,7 +186,7 @@ describe('tenon-node module:', function() {
         });
 
       api.checkSrc('<html lang="en"><head><title>Test page</title><head><body><img src="test.jpg"></body></html>', {}, function(err, result) {
-        expect(err.message).to.be('a message');
+        expect(err.message).to.equal('a message');
         expect(result).to.be.empty();
       });
     });
@@ -212,7 +212,7 @@ describe('tenon-node module:', function() {
   describe('checkFragment', function() {
     it('should return an error if a block of HTML is not specified', function() {
       api.checkSrc('', function(err, result) {
-        expect(err.message).to.be('You must specify a block of HTML source code to be checked.');
+        expect(err.message).to.equal('You must specify a block of HTML source code to be checked.');
         expect(result).to.be.empty();
       });
     });
@@ -229,7 +229,7 @@ describe('tenon-node module:', function() {
         });
 
       api.checkSrc('<p>test</p>', {}, function(err, result) {
-        expect(err.message).to.be('a message');
+        expect(err.message).to.equal('a message');
         expect(result).to.be.empty();
       });
     });
