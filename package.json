@@ -1,6 +1,6 @@
 {
   "name": "tenon-node",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "main": "lib/tenon-node.js",
   "description": "Node.js wrapper for the Tenon.io API",
   "homepage": "https://github.com/poorgeek/tenon-node",
@@ -42,6 +42,7 @@
     "time-grunt": "^2.0.0"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "license": "npm install -g license-checker && license-checker --production --csv --out licenses.csv"
   }
 }
