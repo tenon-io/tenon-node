@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-- '4'
-- '6'
-- '8'
+- '12'
+- '14'
+- '16'
 before_install:
-- if [[ `npm -v` != 5* ]]; then npm i -g npm@5; fi
-- npm install -g grunt-cli
+- npm install -g npm grunt-cli
 install: npm install
 deploy:
   provider: npm

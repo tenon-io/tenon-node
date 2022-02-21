@@ -2,10 +2,10 @@
 
 'use strict';
 
-var tenonNode = require('./lib/tenon-node');
+const tenonNode = require('./lib/tenon-node');
 
-var userArgs = process.argv;
-var searchParam = userArgs[2];
+const userArgs = process.argv;
+const searchParam = userArgs[2];
 
 if (userArgs.indexOf('-h') !== -1 || userArgs.indexOf('--help') !== -1 || searchParam === undefined) {
     return console.log('cli help');
