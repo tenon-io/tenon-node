@@ -2,14 +2,14 @@
 
 'use strict';
 
-var expect = require('must');
-var nock = require('nock');
-var TenonNode = require('../lib/tenon-node.js');
+const expect = require('must');
+const nock = require('nock');
+const TenonNode = require('../lib/tenon-node');
 
 describe('tenon-node module:', function() {
-  var API_URL = 'https://www.tenon.io';
+  const API_URL = 'https://www.tenon.io';
 
-  var api = new TenonNode({
+  const api = new TenonNode({
     key: 'AN_API_KEY',
     baseUrl: 'http://tenon.io',
   });
@@ -98,7 +98,7 @@ describe('tenon-node module:', function() {
 
       api.analyze('<html lang="en"><head><title>Test page</title><head><body><img src="test.jpg"></body></html>', function(err, result) {
         expect(err).to.be.null();
-        expect(result).to.be.not.null();
+        expect(result).to.not.be.null();
       });
     });
 
@@ -115,7 +115,7 @@ describe('tenon-node module:', function() {
 
       api.checkSrc('<p>test</p>', function(err, result) {
         expect(err).to.be.null();
-        expect(result).to.be.not.null();
+        expect(result).to.not.be.null();
       });
     });
   });
@@ -129,7 +129,7 @@ describe('tenon-node module:', function() {
     });
 
     it('should return an error if Tenon API returns an error message', function() {
-      var url = 'http://www.example.com';
+      const url = 'http://www.example.com';
 
       nock(API_URL)
         .filteringRequestBody(function() {
@@ -142,7 +142,7 @@ describe('tenon-node module:', function() {
         });
 
       api.checkUrl(url, {}, function(err, result) {
-        expect(err).to.be.not.null();
+        expect(err).to.not.be.null();
         expect(err.message).to.be('a message');
         expect(result).to.be.empty();
       });
@@ -186,6 +186,7 @@ describe('tenon-node module:', function() {
         });
 
       api.checkSrc('<html lang="en"><head><title>Test page</title><head><body><img src="test.jpg"></body></html>', {}, function(err, result) {
+        expect(err).to.not.be.null();
         expect(err.message).to.be('a message');
         expect(result).to.be.empty();
       });
@@ -204,7 +205,7 @@ describe('tenon-node module:', function() {
 
       api.checkSrc('<p>test</p>', function(err, result) {
         expect(err).to.be.null();
-        expect(result).to.be.not.null();
+        expect(result).to.not.be.null();
       });
     });
   });
@@ -229,6 +230,7 @@ describe('tenon-node module:', function() {
         });
 
       api.checkSrc('<p>test</p>', {}, function(err, result) {
+        expect(err).to.not.be.null();
         expect(err.message).to.be('a message');
         expect(result).to.be.empty();
       });
@@ -247,7 +249,7 @@ describe('tenon-node module:', function() {
 
       api.checkSrc('<p>test</p>', function(err, result) {
         expect(err).to.be.null();
-        expect(result).to.be.not.null();
+        expect(result).to.not.be.null();
       });
     });
   });

@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = function(grunt) {
-  // Show elapsed time at the end
-  require('time-grunt')(grunt);
   // Load all grunt tasks
   require('load-grunt-tasks')(grunt);
 
@@ -13,7 +11,7 @@ module.exports = function(grunt) {
     },
     eslint: {
       options: {
-        configFile: '.eslintrc',
+        overrideConfigFile: '.eslintrc',
       },
       gruntfile: {
         src: 'Gruntfile.js',
