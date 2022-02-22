@@ -21,4 +21,5 @@ jobs:
         email: '$NPM_EMAIL'
         on:
           tags: true
+          all_branches: true
           repo: tenon-io/tenon-node
