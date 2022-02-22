@@ -2,20 +2,20 @@
 
 # Node.js wrapper for the Tenon.io API
 
-[![NPM](https://nodei.co/npm/tenon-node.png)](https://nodei.co/npm/tenon-node/)
+[![NPM](https://nodei.co/npm/@tenon-io/tenon-node.png)](https://nodei.co/npm/@tenon-io/tenon-node/)
 
-[![Build Status](https://secure.travis-ci.org/poorgeek/tenon-node.png?branch=master)](http://travis-ci.org/poorgeek/tenon-node) ![Dependencies](https://david-dm.org/poorgeek/tenon-node.svg) ![Dev Dependencies](https://david-dm.org/poorgeek/tenon-node/dev-status.svg)
+[![Build Status](https://secure.travis-ci.org/tenon-io/tenon-node.png?branch=main)](http://travis-ci.org/tenon-io/tenon-node)
 
 
 ## Getting Started
 
-Install the module with: `npm install tenon-node`
+Install the module with: `npm install @tenon-io/tenon-node`
 
 ```js
-var tenonNode = require('tenon-node');
+const tenonNode = require('tenon-node');
 
 // Create an instance with your API key
-var tenonApi = new tenonNode({
+const tenonApi = new tenonNode({
     key: 'YOUR_API_KEY_HERE',
     endPoint: 'http://tenon.io' // or your private tenon instance
 });
