@@ -4,7 +4,7 @@
 
 [![NPM](https://nodei.co/npm/@tenon-io/tenon-node.png)](https://nodei.co/npm/@tenon-io/tenon-node/)
 
-[![Build Status](https://secure.travis-ci.org/tenon-io/tenon-node.png?branch=main)](http://travis-ci.org/tenon-io/tenon-node)
+[![Build Status](https://app.travis-ci.com/tenon-io/tenon-node.svg?branch=main)](https://app.travis-ci.com/tenon-io/tenon-node)
 
 
 ## Getting Started
