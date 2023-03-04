@@ -38,7 +38,7 @@
     "grunt": "^1.4.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^24.0.0",
-    "grunt-mocha-cli": "^4.0.0",
+    "grunt-mocha-cli": "^7.0.0",
     "load-grunt-tasks": "^5.1.0",
     "mocha": "^9.2.1",
     "must": "^0.13.4",
